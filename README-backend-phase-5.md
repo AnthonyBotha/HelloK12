@@ -466,7 +466,7 @@ user in the following format on successful login/signup:
     firstName,
     lastName,
     email,
-    userName
+    username
   }
 }
 ```
@@ -481,7 +481,7 @@ format if there is a logged in user:
     firstName,
     lastName,
     email,
-    userName
+    username
   }
 }
 ```
