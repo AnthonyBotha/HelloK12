@@ -1,0 +1,77 @@
+{
+  "hash": "eae66a2f",
+  "browserHash": "131f51cf",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "fa6705ea",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "40332dda",
+      "needsInterop": true
+    },
+    "react-redux": {
+      "src": "../../node_modules/react-redux/es/index.js",
+      "file": "react-redux.js",
+      "fileHash": "845eb79e",
+      "needsInterop": false
+    },
+    "js-cookie": {
+      "src": "../../node_modules/js-cookie/dist/js.cookie.mjs",
+      "file": "js-cookie.js",
+      "fileHash": "cbca9a9d",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "f44de0c6",
+      "needsInterop": false
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "5e5592fc",
+      "needsInterop": true
+    },
+    "redux": {
+      "src": "../../node_modules/redux/es/redux.js",
+      "file": "redux.js",
+      "fileHash": "dd782771",
+      "needsInterop": false
+    },
+    "redux-thunk": {
+      "src": "../../node_modules/redux-thunk/es/index.js",
+      "file": "redux-thunk.js",
+      "fileHash": "46aa1084",
+      "needsInterop": false
+    },
+    "redux-logger": {
+      "src": "../../node_modules/redux-logger/dist/redux-logger.js",
+      "file": "redux-logger.js",
+      "fileHash": "d065c0a7",
+      "needsInterop": true
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "ace6c539",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-D5SJRT53": {
+      "file": "chunk-D5SJRT53.js"
+    },
+    "chunk-ZAUFE7H7": {
+      "file": "chunk-ZAUFE7H7.js"
+    },
+    "chunk-UXIASGQL": {
+      "file": "chunk-UXIASGQL.js"
+    }
+  }
+}
