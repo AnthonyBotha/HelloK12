@@ -8,7 +8,8 @@ Welcome to HelloK12, the platform that makes learning a new language fun and eng
 * Sign Up & Login: Create a new account to select the language you want to learn and start your learning journey. If you're a returning user, log in to pick up where you left off.
 * Curriculum Customization: Customize the vocabulary you learn.
 ### Curriculum Customization
-* Customization: Add, edit, or delete vocaubalry based on your learning needs. All vocabulary is can be grouped based on your preferences.
+* Vocabulary Customization: Add, edit, or delete vocaubalry based on your learning needs. 
+* Vocabulary Grouping Customization: Add, edit, or delet units to grouped vocabulary based on your preferences.
 ### Immersive Learning Experience
 * Practice Listening: Identify the correct flashcard based on the voice prompt.
 * Practice Speaking: Say the word outloud based on the flashcard displayed.
