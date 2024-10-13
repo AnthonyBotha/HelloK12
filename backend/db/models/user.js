@@ -1,11 +1,46 @@
 'use strict';
 
-const { Model, Validator } = require('sequelize');
+const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-      // define association here
+      User.hasMany(models.SiteUILanguage,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
+
+      User.hasMany(models.LanguageCourse,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
+
+      User.hasMany(models.ListeningSession,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
+
+      User.hasMany(models.SpeakingSession,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
+
+      User.hasMany(models.ReadingSession,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
+
+      User.hasMany(models.WritingSession,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
+
     }
   }
 
@@ -55,6 +90,10 @@ module.exports = (sequelize, DataTypes) => {
           len: [60, 60],
         },
       },
+      points: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+      }
     },
     {
       sequelize,
