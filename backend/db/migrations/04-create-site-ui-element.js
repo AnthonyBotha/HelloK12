@@ -16,7 +16,8 @@ module.exports = {
       siteUILanguageId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {model:"SiteUILanguages"}
+        references: {model:"SiteUILanguages"},
+        onDelete: "CASCADE"
       },
       createdAt: {
         allowNull: false,
