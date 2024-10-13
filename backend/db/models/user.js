@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
 
       User.hasMany(models.LanguageCourse,{
         foreignKey: "userId",
-        // onDelete: "CASCADE",
-        // hooks: true
+        onDelete: "CASCADE",
+        hooks: true
       })
 
       User.hasMany(models.ListeningSession,{
