@@ -23,14 +23,14 @@ module.exports = {
         vocabularyId:2,
         userAnswer: "Mother",
         isCorrect: false,
-        correctiveActionId: 2,
+        correctiveActionId: 2
       },
       {
         speakingSessionId:3,
         vocabularyId:3,
         userAnswer: "Dog",
         isCorrect: true,
-        correctiveActionId: 3,
+        correctiveActionId: 3
       }
     ], { validate: true });
   },

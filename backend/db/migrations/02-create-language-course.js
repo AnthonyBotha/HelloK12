@@ -11,13 +11,12 @@ module.exports = {
       },
       language: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {model: "Users"},
-        onDelete: "CASCADE"
+        references: {model: "Users"}
       },
       createdAt: {
         allowNull: false,

@@ -80,14 +80,14 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         validate: {
           len: [3, 256],
-          isEmail: true,
+          isEmail: true
         },
       },
       hashedPassword: {
         type: DataTypes.STRING.BINARY,
         allowNull: false,
         validate: {
-          len: [60, 60],
+          len: [60, 60]
         },
       },
       points: {

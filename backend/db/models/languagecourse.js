@@ -54,7 +54,7 @@ module.exports = (sequelize, DataTypes) => {
   LanguageCourse.init({
     language: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     userId: {
       type: DataTypes.INTEGER,
