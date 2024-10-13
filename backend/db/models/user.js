@@ -5,41 +5,41 @@ const { Model, Validator } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-      // User.hasMany(models.SiteUILanguage,{
-      //   foreignKey: "userId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      User.hasMany(models.SiteUILanguage,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
-      // User.hasMany(models.LanguageCourse,{
-      //   foreignKey: "userId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      User.hasMany(models.LanguageCourse,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
-      // User.hasMany(models.ListeningSession,{
-      //   foreignKey: "userId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      User.hasMany(models.ListeningSession,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
-      // User.hasMany(models.SpeakingSession,{
-      //   foreignKey: "userId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      User.hasMany(models.SpeakingSession,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
-      // User.hasMany(models.ReadingSession,{
-      //   foreignKey: "userId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      User.hasMany(models.ReadingSession,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
-      // User.hasMany(models.WritingSession,{
-      //   foreignKey: "userId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      User.hasMany(models.WritingSession,{
+        foreignKey: "userId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
     }
   }

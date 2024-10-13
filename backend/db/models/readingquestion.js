@@ -10,17 +10,17 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // ReadingQuestion.belongsTo(models.ReadingSession, {
-      //   foreignKey: "readingSessionId"
-      // })
+      ReadingQuestion.belongsTo(models.ReadingSession, {
+        foreignKey: "readingSessionId"
+      })
 
-      // ReadingQuestion.belongsTo(models.CorrectiveAction, {
-      //   foreignKey: "correctiveActionId"
-      // })
+      ReadingQuestion.belongsTo(models.CorrectiveAction, {
+        foreignKey: "correctiveActionId"
+      })
 
-      // ReadingQuestion.belongsTo(models.Vocabulary, {
-      //   foreignKey: "vocabularyId"
-      // })
+      ReadingQuestion.belongsTo(models.Vocabulary, {
+        foreignKey: "vocabularyId"
+      })
     }
   }
   ReadingQuestion.init({

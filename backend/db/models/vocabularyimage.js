@@ -10,9 +10,9 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // VocabularyImage.belongsTo(models.Vocabulary, {
-      //   foreignKey: "vocabularyId"
-      // })
+      VocabularyImage.belongsTo(models.Vocabulary, {
+        foreignKey: "vocabularyId"
+      })
     }
   }
   VocabularyImage.init({

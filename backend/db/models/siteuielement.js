@@ -10,9 +10,9 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // SiteUIElement.belongsTo(models.SiteUILanguage,{
-      //   foreignKey: "siteUILanguageId"
-      // })
+      SiteUIElement.belongsTo(models.SiteUILanguage,{
+        foreignKey: "siteUILanguageId"
+      })
     }
   }
   SiteUIElement.init({

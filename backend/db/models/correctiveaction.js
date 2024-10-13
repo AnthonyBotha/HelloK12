@@ -10,33 +10,33 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // CorrectiveAction.belongsTo(models.LanguageCourse, {
-      //   foreignKey: "languageCourseId"
-      // })
+      CorrectiveAction.belongsTo(models.LanguageCourse, {
+        foreignKey: "languageCourseId"
+      })
 
-      // CorrectiveAction.hasMany(models.ListeningQuestion,{
-      //   foreignKey: "correctiveActionId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      CorrectiveAction.hasMany(models.ListeningQuestion,{
+        foreignKey: "correctiveActionId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
-      // CorrectiveAction.hasMany(models.SpeakingQuestion,{
-      //   foreignKey: "correctiveActionId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      CorrectiveAction.hasMany(models.SpeakingQuestion,{
+        foreignKey: "correctiveActionId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
-      // CorrectiveAction.hasMany(models.ReadingQuestion,{
-      //   foreignKey: "correctiveActionId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      CorrectiveAction.hasMany(models.ReadingQuestion,{
+        foreignKey: "correctiveActionId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
 
-      // CorrectiveAction.hasMany(models.WritingQuestion,{
-      //   foreignKey: "correctiveActionId",
-      //   onDelete: "CASCADE",
-      //   hooks: true
-      // })
+      CorrectiveAction.hasMany(models.WritingQuestion,{
+        foreignKey: "correctiveActionId",
+        onDelete: "CASCADE",
+        hooks: true
+      })
     }
   }
   CorrectiveAction.init({
