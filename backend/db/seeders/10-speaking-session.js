@@ -1,6 +1,5 @@
 'use strict';
 
-const { SpeakingSession } = require('../models');
 
 let options = {};
 if (process.env.NODE_ENV === 'production') {
@@ -10,7 +9,8 @@ if (process.env.NODE_ENV === 'production') {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await SpeakingSession.bulkCreate([
+    options.tableName = 'SpeakingSessions';
+    await queryInterface.bulkInsert(options,[
       {
         userId: 1,
         startTime: new Date("2025-03-02"),
@@ -32,7 +32,7 @@ module.exports = {
         status: "Complete",
         languageCourseId: 3
       }
-    ], { validate: true });
+    ], {});
 
   },
 

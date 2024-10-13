@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
   async up(queryInterface, Sequelize) {
     options.tableName = 'ListeningQuestions';
-    return queryInterface.bulkInsert(options,[
+    await queryInterface.bulkInsert(options,[
       {
         listeningSessionId:1,
         vocabularyId:1,
@@ -37,7 +37,7 @@ module.exports = {
   async down(queryInterface, Sequelize) {
   options.tableName = 'ListeningQuestions';
   const Op = Sequelize.Op;
-  return queryInterface.bulkDelete(options, {
+  await queryInterface.bulkDelete(options, {
     userAnswer: { [Op.in]: ["Apple","Mother","Dog"] }
   }, {});
 

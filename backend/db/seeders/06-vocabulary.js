@@ -1,6 +1,5 @@
 'use strict';
 
-const { Vocabulary } = require('../models');
 
 let options = {};
 if (process.env.NODE_ENV === 'production') {
@@ -10,7 +9,8 @@ if (process.env.NODE_ENV === 'production') {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await Vocabulary.bulkCreate([
+    options.tableName = 'Vocabularies';
+    await queryInterface.bulkInsert(options,[
       {
         word: "Spanish-Apple",
         unitId:1
@@ -23,13 +23,13 @@ module.exports = {
         word: "Spanish-Dog",
         unitId:3
       }
-    ], { validate: true });
+    ], {});
   },
 
   async down(queryInterface, Sequelize) {
   options.tableName = 'Vocabularies';
   const Op = Sequelize.Op;
-  return queryInterface.bulkDelete(options, {
+  await queryInterface.bulkDelete(options, {
     word: { [Op.in]: ["Spanish-Apple","English-Brother","Spanish-Dog"] }
   }, {});
 

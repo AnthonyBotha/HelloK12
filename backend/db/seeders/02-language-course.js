@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
   async up(queryInterface, Sequelize) {
     options.tableName = 'LanguageCourses';
-    return queryInterface.bulkInsert(options,[
+    await queryInterface.bulkInsert(options,[
       {
         language: "Spanish",
         userId: 1
@@ -30,7 +30,7 @@ module.exports = {
   async down(queryInterface, Sequelize) {
   options.tableName = 'LanguageCourses';
   const Op = Sequelize.Op;
-  return queryInterface.bulkDelete(options, {
+  await queryInterface.bulkDelete(options, {
     language: { [Op.in]: ["Spanish", "English", "Spanish"] }
   }, {});
 

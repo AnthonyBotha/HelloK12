@@ -10,39 +10,39 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Vocabulary.belongsTo(models.Unit, {
-        foreignKey: "unitId"
-      })
+      // Vocabulary.belongsTo(models.Unit, {
+      //   foreignKey: "unitId"
+      // })
 
-      Vocabulary.hasMany(models.VocabularyImage,{
-        foreignKey: "vocabularyId",
-        onDelete: "CASCADE",
-        hooks: true
-      })
+      // Vocabulary.hasMany(models.VocabularyImage,{
+      //   foreignKey: "vocabularyId",
+      //   onDelete: "CASCADE",
+      //   hooks: true
+      // })
 
-      Vocabulary.hasMany(models.ListeningQuestion,{
-        foreignKey: "vocabularyId",
-        onDelete: "CASCADE",
-        hooks: true
-      })
+      // Vocabulary.hasMany(models.ListeningQuestion,{
+      //   foreignKey: "vocabularyId",
+      //   onDelete: "CASCADE",
+      //   hooks: true
+      // })
 
-      Vocabulary.hasMany(models.SpeakingQuestion,{
-        foreignKey: "vocabularyId",
-        onDelete: "CASCADE",
-        hooks: true
-      })
+      // Vocabulary.hasMany(models.SpeakingQuestion,{
+      //   foreignKey: "vocabularyId",
+      //   onDelete: "CASCADE",
+      //   hooks: true
+      // })
 
-      Vocabulary.hasMany(models.ReadingQuestion,{
-        foreignKey: "vocabularyId",
-        onDelete: "CASCADE",
-        hooks: true
-      })
+      // Vocabulary.hasMany(models.ReadingQuestion,{
+      //   foreignKey: "vocabularyId",
+      //   onDelete: "CASCADE",
+      //   hooks: true
+      // })
 
-      Vocabulary.hasMany(models.WritingQuestion,{
-        foreignKey: "vocabularyId",
-        onDelete: "CASCADE",
-        hooks: true
-      })
+      // Vocabulary.hasMany(models.WritingQuestion,{
+      //   foreignKey: "vocabularyId",
+      //   onDelete: "CASCADE",
+      //   hooks: true
+      // })
     }
   }
   Vocabulary.init({

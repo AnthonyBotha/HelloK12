@@ -1,6 +1,5 @@
 'use strict';
 
-const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 
 let options = {};
@@ -11,8 +10,8 @@ if (process.env.NODE_ENV === 'production') {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
- 
-    await User.bulkCreate([
+    options.tableName = 'Users';
+    await queryInterface.bulkInsert(options, [
       {
         email: 'demo@user.io',
         firstName: "DemoUser",
@@ -37,14 +36,14 @@ module.exports = {
         hashedPassword: bcrypt.hashSync('password2'),
         points: 0
       }
-    ], { validate: true });
+    ], {});
 
   },
 
   async down(queryInterface, Sequelize) {
     options.tableName = 'Users';
     const Op = Sequelize.Op;
-    return queryInterface.bulkDelete(options, {
+    await queryInterface.bulkDelete(options, {
       username: { [Op.in]: ['Demo-lition', 'FakeUser1', 'FakeUser2'] }
     }, {});
 

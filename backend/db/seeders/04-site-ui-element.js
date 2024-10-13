@@ -29,7 +29,7 @@ module.exports = {
   async down(queryInterface, Sequelize) {
     options.tableName = 'SiteUIElements';
     const Op = Sequelize.Op;
-    return queryInterface.bulkDelete(options, {
+    await queryInterface.bulkDelete(options, {
       element: { [Op.in]: ["hello", "hello", "Menu"] }
     }, {});
 

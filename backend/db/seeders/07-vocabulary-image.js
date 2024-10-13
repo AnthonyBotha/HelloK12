@@ -1,7 +1,5 @@
 'use strict';
 
-const { VocabularyImage } = require('../models');
-
 let options = {};
 if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
@@ -10,7 +8,8 @@ if (process.env.NODE_ENV === 'production') {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await VocabularyImage.bulkCreate([
+    options.tableName = 'VocabularyImages';
+    await queryInterface.bulkInsert(options,[
       {
         imgUrl: "https://res.cloudinary.com/dmg8yuivs/image/upload/v1728774135/apple_ahqg1i.png",
         vocabularyId:1
@@ -29,7 +28,7 @@ module.exports = {
   async down(queryInterface, Sequelize) {
   options.tableName = 'VocabularyImages';
   const Op = Sequelize.Op;
-  return queryInterface.bulkDelete(options, {
+  await queryInterface.bulkDelete(options, {
     imgUrl: { [Op.in]: ["https://res.cloudinary.com/dmg8yuivs/image/upload/v1728774135/apple_ahqg1i.png","https://res.cloudinary.com/dmg8yuivs/image/upload/v1728774135/boy_dvnezy.png","https://res.cloudinary.com/dmg8yuivs/image/upload/v1728774135/dog_tgy8td.png"] }
   }, {});
 

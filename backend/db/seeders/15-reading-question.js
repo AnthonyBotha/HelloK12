@@ -1,7 +1,5 @@
 'use strict';
 
-const { ReadingQuestion } = require('../models');
-
 let options = {};
 if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
@@ -10,7 +8,8 @@ if (process.env.NODE_ENV === 'production') {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await ReadingQuestion.bulkCreate([
+    options.tableName = 'ReadingQuestions';
+    await queryInterface.bulkInsert(options,[
       {
         readingSessionId:1,
         vocabularyId:1,
@@ -32,13 +31,13 @@ module.exports = {
         isCorrect: true,
         correctiveActionId: 3
       }
-    ], { validate: true });
+    ], {});
   },
 
   async down(queryInterface, Sequelize) {
   options.tableName = 'ReadingQuestions';
   const Op = Sequelize.Op;
-  return queryInterface.bulkDelete(options, {
+  await queryInterface.bulkDelete(options, {
     userAnswer: { [Op.in]: ["Apple","Mother","Dog"] }
   }, {});
 

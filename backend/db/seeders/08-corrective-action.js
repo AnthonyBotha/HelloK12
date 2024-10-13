@@ -1,7 +1,5 @@
 'use strict';
 
-const { CorrectiveAction } = require('../models');
-
 let options = {};
 if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
@@ -10,7 +8,8 @@ if (process.env.NODE_ENV === 'production') {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await CorrectiveAction.bulkCreate([
+    options.tableName = 'CorrectiveActions';
+    await queryInterface.bulkInsert(options,[
       {
         correct:true,
         phrase: "Spanish-Good Job!",
@@ -26,13 +25,13 @@ module.exports = {
         phrase: "Spanish-That's correct!",
         languageCourseId:3
       }
-    ], { validate: true });
+    ], {});
   },
 
   async down(queryInterface, Sequelize) {
   options.tableName = 'CorrectiveActions';
   const Op = Sequelize.Op;
-  return queryInterface.bulkDelete(options, {
+  await queryInterface.bulkDelete(options, {
     phrase: { [Op.in]: ["Spanish-Good Job!","English-Try again!","Spanish-That's correct!"] }
   }, {});
 
