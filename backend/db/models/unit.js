@@ -34,6 +34,10 @@ module.exports = (sequelize, DataTypes) => {
     languageCourseId: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    languageCode: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {
     sequelize,

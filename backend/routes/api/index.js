@@ -2,6 +2,7 @@
 const router = require('express').Router();
 const sessionRouter = require("./session.js");
 const usersRouter = require("./users.js");
+const languagesRouter = require("./languages.js");
 // GET /api/restore-user
 const { restoreUser } = require('../../utils/auth.js');
 
@@ -14,6 +15,7 @@ router.use("/session", sessionRouter);
 
 router.use("/users", usersRouter);
 
+router.use("/language-courses", languagesRouter);
 
 
 // router.get('/restore-user', (req, res) => {

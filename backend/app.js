@@ -13,11 +13,13 @@ const isProduction = environment === 'production';
 const { ValidationError } = require('sequelize');
 
 
+
 const app = express();
 
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(express.json());
+
 
 // Security Middleware
 if (!isProduction) {
@@ -42,6 +44,8 @@ app.use(
     }
   })
 );
+
+
 
 app.use(routes); // Connect all the routes
 

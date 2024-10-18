@@ -13,12 +13,6 @@ module.exports = (sequelize, DataTypes) => {
       SiteUILanguage.belongsTo(models.User,{
         foreignKey: "userId"
       })
-
-      SiteUILanguage.hasMany(models.SiteUIElement,{
-        foreignKey: "siteUILanguageId",
-        onDelete: "CASCADE",
-        hooks: true
-      })
     }
   }
   SiteUILanguage.init({
@@ -28,6 +22,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     userId: {
       type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    element: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    languageCode: {
+      type: DataTypes.STRING,
       allowNull: false
     }
   }, {

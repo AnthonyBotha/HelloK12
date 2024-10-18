@@ -14,12 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "unitId"
       })
 
-      Vocabulary.hasMany(models.VocabularyImage,{
-        foreignKey: "vocabularyId",
-        onDelete: "CASCADE",
-        hooks: true
-      })
-
       Vocabulary.hasMany(models.ListeningQuestion,{
         foreignKey: "vocabularyId",
         onDelete: "CASCADE",
@@ -52,6 +46,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     unitId: {
       type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    imgUrl: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    languageCode: {
+      type: DataTypes.STRING,
       allowNull: false
     }
   }, {
