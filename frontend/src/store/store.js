@@ -1,9 +1,15 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import sessionReducer from './session';
+import languageCourseReducer from './language';
+import unitReducer from './unit';
+import vocabularyReducer from './vocabulary';
 
 const rootReducer = combineReducers({
-  session: sessionReducer
+  session: sessionReducer,
+  languageCourse: languageCourseReducer,
+  unit: unitReducer,
+  vocabulary: vocabularyReducer
 });
 
 let enhancer;

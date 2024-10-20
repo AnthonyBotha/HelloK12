@@ -29,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <h1>Welcome!</h1>
+      },
+      {
+        path: '/languages',
+        element: <h1>Languages</h1>
       }
     ]
   }

@@ -4,17 +4,43 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    
 }
+
+.left-section {
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-options-one {
+    display: flex;
+    margin-left: 20px;
+}
+
+.menu-options-one div {
+    margin-right: 60px;
+}
+
 .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.flag-icon {
+    margin-left: 10px;
+}
+
+.right-section {
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    width: 80px;
-    height: auto;
-}
 
 .create-spot-container {
     display: flex;

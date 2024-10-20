@@ -1,0 +1,38 @@
+.site-language-selection-container {
+    position: relative;
+}
+
+.site-language-icon {
+    font-size: 36px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+
+.site-language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translateX(-60%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.site-language-dropdown li {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+.site-language-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+
